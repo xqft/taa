@@ -3,7 +3,7 @@
 
 The course is based on Geron's "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems".
 
-This repository contains the individual work done in the course (althougheach workshop starts in an in-person class so we get to discuss and share details with other students and profs). There's one workshop ("taller" in spanish) per week, contained in each `tN` folder (the `t` stands for "taller").
+This repository contains the individual work done in the course (although each workshop starts in an in-person class so we get to discuss and share details with other students and profs). There's one workshop ("taller" in spanish) per week, contained in each `tN` folder (the `t` stands for "taller").
 
 ## Workshop summaries and conclusions
 
