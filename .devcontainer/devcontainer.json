@@ -1,8 +1,0 @@
-{
-    "image": "nielsborie/machine-learning-environments",
-    "customizations": {
-        "vscode": {
-            "extensions": ["ms-toolsai.jupyter", "ms-python.python"]
-        }
-    }
-}
