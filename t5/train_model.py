@@ -69,3 +69,36 @@ hyperband = kt.Hyperband(
 
 early = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=5)
 hyperband.search(X_train, y_train, epochs=80, validation_data=(X_val, y_val), callbacks=[early])
+
+#
+
+best_model = hyperband.get_best_models()[0]
+best_model.save("./best_hyperband")
+#best_model = tf.keras.models.load_model('./best_hyperband')
+best_model.evaluate(X_val, y_val)
+
+#
+
+from sklearn.model_selection import train_test_split
+
+X = df_test.copy()
+
+X['datetime'] = pd.to_datetime(X['datetime'])
+X['hour'] = X['datetime'].dt.hour
+X['weekday'] = X['datetime'].dt.weekday
+#X['month'] = X['datetime'].dt.month
+X['year'] = X['datetime'].dt.month
+
+# "count" es la columna objetivo, "casual" y "registered" son parte del objetivo
+# pero solo queremos predecir la cantidad total de bicicletas alquiladas.
+X = X.drop(columns=["datetime"])
+
+norm_layer = tf.keras.layers.Normalization()
+norm_layer.adapt(X)
+X = norm_layer(X)
+
+y = pd.DataFrame()
+y["datetime"] = df_test["datetime"]
+y["count"] = np.round(best_model.predict(X)).astype(int)
+
+y.to_csv("submission.csv", index=False)
