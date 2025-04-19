@@ -10,3 +10,7 @@ This repository contains the individual work done in the course (although each w
 1. Titanic survivor binary classifier, based on features of every passenger. Concluded that the most significant features are the passenger's class and sex (as women were prioritized in the lifeboats).
 2. IMDB movie reviews sentiment binary classifier. Final result of 87% accuracy in test set (we weren't taking into account precision, recall, F1 and other metrics yet), using stop words, bigrams and tf-idf metric for weighting.
 3. Bike rental regressor. Cross validation RMSLE of ~0.37 (the error would probable be a lot higher on the test set) using random forest with gradient boosting (XGBoost), Kaggle top 5 leaderboard error is in the 0.35 ball park.
+4. Anomaly detection.
+5. Bike rental prediction over time using RNNs.
+
+We also had two projects in which we solved the Higgs Boson and Freesound Audio Tagging challenges on Kaggle, but those are on private repos
