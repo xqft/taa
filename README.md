@@ -1,16 +1,73 @@
-# Taller de Aprendizaje Automatico (Machine Learning Workshop)
-#### Facultad de Ingenieria, UdelaR. 2024
+# Taller de Aprendizaje Automático
 
-The course is based on Geron's "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems".
+**Facultad de Ingeniería, UdelaR - 2024**
 
-This repository contains the individual work done in the course (although each workshop starts in an in-person class so we get to discuss and share details with other students and profs). There's one workshop ("taller" in spanish) per week, contained in each `tN` folder (the `t` stands for "taller").
+Colección de proyectos desarrollados en el curso Taller de Aprendizaje Automático, basado en el libro "Hands-On Machine Learning" de Aurélien Géron.
 
-## Workshop summaries and conclusions
+## 🎯 Habilidades Demostradas
 
-1. Titanic survivor binary classifier, based on features of every passenger. Concluded that the most significant features are the passenger's class and sex (as women were prioritized in the lifeboats).
-2. IMDB movie reviews sentiment binary classifier. Final result of 87% accuracy in test set (we weren't taking into account precision, recall, F1 and other metrics yet), using stop words, bigrams and tf-idf metric for weighting.
-3. Bike rental regressor. Cross validation RMSLE of ~0.37 (the error would probable be a lot higher on the test set) using random forest with gradient boosting (XGBoost), Kaggle top 5 leaderboard error is in the 0.35 ball park.
-4. Anomaly detection.
-5. Bike rental prediction over time using RNNs.
+- Clasificación binaria y multiclase
+- Regresión y predicción de series temporales
+- Procesamiento de lenguaje natural (NLP)
+- Redes neuronales recurrentes (RNN)
+- Detección de anomalías
+- Deep learning con TensorFlow/Keras
+- Ingeniería de características y preprocesamiento de datos
+- Optimización de hiperparámetros con Grid Search
+- Validación cruzada y evaluación de modelos
 
-We also had two projects in which we solved the Higgs Boson and Freesound Audio Tagging challenges on Kaggle, but those are on private repos
+## 🛠️ Tecnologías
+
+Python, scikit-learn, TensorFlow, Keras, XGBoost, pandas, NumPy, matplotlib, seaborn
+
+## 📂 Proyectos
+
+### Talleres Semanales
+
+1. **[Clasificador Titanic](./01-clasificador-titanic/)** - Predicción de supervivencia usando regresión logística. Demostré que el sexo y la clase del pasajero fueron los factores más significativos.
+
+2. **[Análisis de Sentimiento IMDB](./02-sentiment-imdb/)** - Clasificación binaria de reseñas de películas. Alcancé 87% de accuracy usando stop words, bigrams y tf-idf.
+
+3. **[Regresión Alquiler de Bicicletas](./03-regresion-bicicletas/)** - Predicción de demanda usando Random Forest con XGBoost. RMSLE de ~0.37 en validación cruzada.
+
+4. **[Detección de Anomalías](./04-deteccion-anomalias/)** - Identificación de patrones anómalos en datos utilizando técnicas de aprendizaje no supervisado.
+
+5. **[Predicción con RNN](./05-bicicletas-rnn/)** - Series temporales con redes neuronales recurrentes para predicción de demanda de bicicletas.
+
+### Proyectos Kaggle
+
+Los siguientes proyectos fueron desarrollados como laboratorios del curso, participando en competencias de Kaggle:
+
+6. **Higgs Boson Challenge** - Clasificación de eventos de física de partículas ([Ver informe](./docs/higgs-boson-informe.pdf))
+
+7. **Freesound Audio Tagging** - Clasificación de audio usando técnicas de deep learning ([Ver informe](./docs/freesound-informe.pdf))
+
+## 📄 Informes
+
+- [Proyecto 1 - Higgs Boson](./docs/higgs-boson-informe.pdf)
+- [Laboratorio 2 - Freesound](./docs/freesound-informe.pdf)
+- [Entregable 1](./docs/entregable-1.pdf)
+- [Entregable 2](./docs/entregable-2.pdf)
+
+## 🚀 Instalación
+
+```bash
+conda env create -f environment.yml
+conda activate taa
+```
+
+## 📝 Estructura del Repositorio
+
+Cada proyecto contiene:
+- Notebooks de Jupyter con análisis exploratorio y desarrollo de modelos
+- Subdirectorio `data/` con los datasets utilizados
+- Scripts Python para entrenamiento y predicción
+- README específico con detalles del proyecto
+
+## 👤 Autor
+
+Estéfano Bargas - [GitHub](https://github.com/xqft)
+
+---
+
+*Desarrollado como parte del curso Taller de Aprendizaje Automático, FING, Universidad de la República, 2024*
