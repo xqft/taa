@@ -1,2 +1,49 @@
+# Kaggle credentials
 .kaggle/
+
+# Experiment tracking
 .comet/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large datasets)
+*.csv
+*.zip
+*.gz
+*.h5
+*.pkl
+
+# Models
+*.h5
+*.pkl
+*.joblib
+saved_models/
+checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
