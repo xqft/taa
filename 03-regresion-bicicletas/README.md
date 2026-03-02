@@ -13,11 +13,7 @@ Modelo de regresión para predecir la demanda de bicicletas de alquiler basándo
 - **Granularidad:** Horaria
 - **Features:** Fecha/hora, temperatura, humedad, velocidad del viento, estacionalidad, días festivos
 
-Archivos en `data/`:
-- `train.csv` - Datos de entrenamiento
-- `test.csv` - Datos de prueba
-- `sampleSubmission.csv` - Formato de submission
-- `submission.csv` - Predicciones del modelo
+Descargar el dataset de [Kaggle Bike Sharing Demand](https://www.kaggle.com/c/bike-sharing-demand/data) y colocar los archivos en `data/`.
 
 ## Resultados
 
@@ -53,11 +49,13 @@ Archivos en `data/`:
 - **Validación cruzada:** K-fold para evaluar generalización
 - **Hyperparameter tuning:** Grid search para max_depth, learning_rate, n_estimators
 
-## Visualizaciones Incluidas
+## Visualizaciones
 
-- `cambios_temp.png` - Relación entre temperatura y demanda
-- `max_depth.png` - Impacto de max_depth en rendimiento
-- `shap.png` - SHAP summary plot de importancia de features
+Las siguientes visualizaciones se generan al ejecutar el notebook:
+
+- Relación entre temperatura y demanda
+- Impacto de max_depth en rendimiento
+- SHAP summary plot de importancia de features
 
 ## Archivos
 

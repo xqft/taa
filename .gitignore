@@ -3,6 +3,10 @@
 
 # Experiment tracking
 .comet/
+mlruns/
+wandb/
+.neptune/
+comet_experiments/
 
 # Python
 __pycache__/
@@ -18,7 +22,6 @@ build/
 
 # Jupyter
 .ipynb_checkpoints/
-*.ipynb_checkpoints
 
 # Data files (large datasets)
 *.csv
@@ -27,39 +30,21 @@ build/
 *.h5
 *.pkl
 
-# Models
-*.h5
-*.pkl
+# Models and ML artifacts
 *.joblib
+*.keras
+*.pth
+*.ckpt
 saved_models/
 checkpoints/
+best_hyperband/
+nn_model/
+nn_model_hyperband/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Logs
-*.log
-logs/
 # Large generated files from Kaggle projects
 **/report.html
 **/submission.csv
 **/random_submission.zip
-*.h5
-*.keras
-
-# ML artifacts and model checkpoints
-*.pth
-*.ckpt
-best_hyperband/
-nn_model/
-nn_model_hyperband/
 
 # Audio files (too large for git)
 *.wav
@@ -76,8 +61,16 @@ data/raw/
 outputs/
 results/
 
-# Experiment tracking
-mlruns/
-wandb/
-.neptune/
-comet_experiments/
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/

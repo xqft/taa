@@ -13,9 +13,7 @@ Clasificador de sentimiento binario para reseñas de películas de IMDB. El mode
 - **Clases:** Positivo/Negativo (balanceado 50/50)
 - **Características:** Texto libre en inglés
 
-Archivos en `data/`:
-- `IMDB Dataset.csv` - Dataset completo
-- `imdb-dataset-of-50k-movie-reviews.zip` - Archivo comprimido
+Descargar el dataset de [Kaggle IMDB](https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews) y colocarlo en `data/`.
 
 ## Resultados
 
@@ -53,8 +51,7 @@ Archivos en `data/`:
 ## Archivos
 
 - `taller2_criticas_cine.ipynb` - Notebook con análisis y modelo
-- `data/` - Dataset de reseñas IMDB
-- `.ipynb_checkpoints/` - Checkpoints de Jupyter
+- `data/` - Dataset de reseñas IMDB (no incluido, ver sección Dataset)
 
 ## Ejecutar el Proyecto
 

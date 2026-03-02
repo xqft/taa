@@ -19,11 +19,7 @@ A diferencia del Taller 3 (que trató cada observación independientemente con X
 - 2 años de datos horarios
 - Features climáticas y temporales
 
-Archivos en `data/`:
-- `train.csv` - Datos de entrenamiento
-- `test.csv` - Datos de prueba
-- `sampleSubmission.csv` - Formato de submission
-- `submission.csv` - Predicciones del modelo
+Descargar el dataset de [Kaggle Bike Sharing Demand](https://www.kaggle.com/c/bike-sharing-demand/data) y colocar los archivos en `data/`.
 
 ## Arquitectura del Modelo
 

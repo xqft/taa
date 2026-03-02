@@ -13,7 +13,7 @@ Clasificador binario que predice la supervivencia de pasajeros del Titanic basá
 - **Features:** Clase, sexo, edad, número de familiares, tarifa, puerto de embarque
 - **Target:** Supervivencia (0 = No sobrevivió, 1 = Sobrevivió)
 
-Los datos están disponibles en `data/`:
+Descargar el dataset de [Kaggle Titanic](https://www.kaggle.com/c/titanic/data) y colocar los archivos en `data/`:
 - `train.csv` - Conjunto de entrenamiento
 - `test.csv` - Conjunto de prueba
 - `gender_submission.csv` - Ejemplo de formato de submission

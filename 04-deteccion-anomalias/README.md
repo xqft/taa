@@ -18,8 +18,7 @@ Desarrollar modelos capaces de identificar observaciones que se desvían signifi
 
 El dataset utilizado contiene observaciones normales y anómalas, con el desafío de identificar las anomalías sin etiquetas previas (o con etiquetas limitadas para validación).
 
-Archivos en `data/`:
-- `corrected (1).gz` - Dataset procesado
+Descargar el dataset KDD Cup 1999 (`corrected.gz`) y colocarlo en `data/`.
 
 ## Técnicas Implementadas
 
@@ -47,7 +46,7 @@ Archivos en `data/`:
 
 ## Visualizaciones
 
-- `aciertos2.png` - Análisis de aciertos del modelo
+Las visualizaciones (análisis de aciertos, clustering, PCA) se generan al ejecutar el notebook.
 
 ## Desafíos
 
@@ -59,8 +58,7 @@ Archivos en `data/`:
 ## Archivos
 
 - `taller4_anomalias.ipynb` - Notebook con implementaciones
-- `data/` - Datasets de prueba
-- `.ipynb_checkpoints/` - Checkpoints de Jupyter
+- `data/` - Datasets de prueba (no incluidos, ver sección Dataset)
 
 ## Ejecutar el Proyecto
 
