@@ -19,12 +19,10 @@ Cinco talleres prácticos desarrollados durante el semestre, cada uno explorando
 
 ### Proyectos Kaggle
 
-Dos proyectos competitivos desarrollados en el curso, documentados en `/docs`:
+Dos proyectos competitivos desarrollados en el curso, con código completo y documentación:
 
-- **Higgs Boson Machine Learning Challenge** - Clasificación de eventos de física de partículas
-- **Freesound Audio Tagging** - Clasificación automática de etiquetas de audio
-
-> **Nota:** El código fuente de los proyectos Kaggle permanece en repositorios privados colaborativos. Los informes completos están disponibles en la carpeta `docs/`.
+6. **[06-kaggle-higgs-boson](./06-kaggle-higgs-boson/)** - Clasificación de eventos de física de partículas ([Informe](./docs/higgs-boson-informe.pdf))
+7. **[07-kaggle-freesound](./07-kaggle-freesound/)** - Clasificación de audio con deep learning ([Informe](./docs/freesound-informe.pdf))
 
 ### Documentación
 
