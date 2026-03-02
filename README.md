@@ -56,9 +56,3 @@ jupyter notebook
 - **Procesamiento:** pandas, numpy, matplotlib, seaborn
 - **Modelos:** Random Forest, XGBoost, RNN/LSTM, transformers
 - **Métricas:** TF-IDF, SHAP values, validación cruzada
-
-## Autor
-
-**Estéfano Bargas**
-Facultad de Ingeniería, Universidad de la República
-Curso 2024
