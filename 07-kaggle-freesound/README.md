@@ -36,15 +36,10 @@ El proyecto explora arquitecturas de deep learning para procesamiento de audio:
 - Técnicas de regularización (Dropout, Batch Normalization, EarlyStopping)
 - Experimentación con Comet ML
 
-### Notebooks Principales
+### Notebooks
 - `EDA.ipynb` - Análisis exploratorio del dataset de audio
-- `notebooks/baseline.ipynb` - Modelo baseline inicial
-- `notebooks/baseline_mobilenet.ipynb` - MobileNet como baseline
+- `notebooks/procesamiento_de_audios.ipynb` - Pipeline de preprocesamiento de audio
 - `notebooks/best_mobilenet.ipynb` - Mejor modelo MobileNet optimizado
-- `notebooks/procesamiento_de_audios.ipynb` - Pipeline de preprocesamiento
-- `notebooks/data_aumentation.ipynb` - Técnicas de data augmentation
-- `notebooks/baseline_mobilenet_augmented_dataset.ipynb` - MobileNet con datos aumentados
-- `notebooks/baseline_mobilenet_mixed_dataset.ipynb` - Dataset mixto
 
 ## Resultados
 
@@ -67,16 +62,9 @@ El proyecto logró desarrollar un modelo robusto de clasificación de audio util
 
 ### Requisitos
 ```bash
+# Instalar dependencias desde el root del repositorio
 pip install -r requirements.txt
 ```
-
-### Infraestructura AWS (Opcional)
-
-Para entrenamiento con GPU, se recomienda:
-- **GPU**: p2.xlarge, p3.2xlarge o g4dn.xlarge
-- **Storage**: Mínimo 100GB SSD
-- **RAM**: El dataset de entrenamiento pesa ~35GB
-- **AMI**: AWS Deep Learning AMI (Ubuntu 18.04) Version 34.0 o posterior
 
 ### Descarga de Datos
 
@@ -84,7 +72,6 @@ Para entrenamiento con GPU, se recomienda:
 
 2. Configurar Kaggle API:
    ```bash
-   pip install kaggle
    mkdir -p ~/.kaggle/
    mv kaggle.json ~/.kaggle/
    chmod 600 ~/.kaggle/kaggle.json
@@ -93,31 +80,19 @@ Para entrenamiento con GPU, se recomienda:
 3. Descargar el dataset:
    ```bash
    kaggle competitions download -c freesound-audio-tagging
+   unzip freesound-audio-tagging.zip -d data/
    ```
-
-### Configuración de Comet ML
-
-1. Crear proyecto en [Comet.ml](https://www.comet.ml/)
-2. Configurar API key en variables de entorno o archivo de configuración
 
 ## Estructura del Proyecto
 
 ```
 07-kaggle-freesound/
 ├── README.md
-├── requirements.txt
 ├── constantes.py                    # Constantes del proyecto
 ├── EDA.ipynb                        # Análisis exploratorio
-├── Propuesta de Planificación.md   # Plan de trabajo
 ├── notebooks/
-│   ├── baseline.ipynb
-│   ├── baseline_mobilenet.ipynb
-│   ├── best_mobilenet.ipynb
-│   ├── procesamiento_de_audios.ipynb
-│   ├── data_aumentation.ipynb
-│   ├── baseline_mobilenet_augmented_dataset.ipynb
-│   ├── baseline_mobilenet_mixed_dataset.ipynb
-│   └── comet_process_data.ipynb
+│   ├── procesamiento_de_audios.ipynb  # Pipeline de preprocesamiento
+│   └── best_mobilenet.ipynb           # Mejor modelo
 └── utils/                           # Utilidades auxiliares
 ```
 
@@ -127,8 +102,8 @@ Para entrenamiento con GPU, se recomienda:
 # Análisis exploratorio
 jupyter notebook EDA.ipynb
 
-# Entrenar baseline
-jupyter notebook notebooks/baseline_mobilenet.ipynb
+# Procesamiento de audio
+jupyter notebook notebooks/procesamiento_de_audios.ipynb
 
 # Mejor modelo
 jupyter notebook notebooks/best_mobilenet.ipynb

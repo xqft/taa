@@ -53,3 +53,31 @@ logs/
 **/random_submission.zip
 *.h5
 *.keras
+
+# ML artifacts and model checkpoints
+*.pth
+*.ckpt
+best_hyperband/
+nn_model/
+nn_model_hyperband/
+
+# Audio files (too large for git)
+*.wav
+*.mp3
+*.flac
+*.ogg
+data/audio/
+data/raw/
+
+# Generated plots and outputs
+*.png
+*.jpg
+*.jpeg
+outputs/
+results/
+
+# Experiment tracking
+mlruns/
+wandb/
+.neptune/
+comet_experiments/

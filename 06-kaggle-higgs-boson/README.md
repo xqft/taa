@@ -17,28 +17,22 @@ El proyecto explora múltiples enfoques de aprendizaje automático:
 
 ### Modelos Implementados
 - **XGBoost**: Modelo de gradient boosting con optimización de hiperparámetros
-- **AdaBoost**: Ensemble de clasificadores débiles
-- **Random Forests**: Bosques aleatorios con ajuste de parámetros
-- **Extra Trees**: Variante de random forests con mayor aleatoriedad
-- **Redes Neuronales**: Modelos de deep learning con Keras/TensorFlow
-- **Regresión Logística**: Con técnicas de oversampling (SMOTE)
+- **Redes Neuronales**: Modelos de deep learning con Keras/TensorFlow y Hyperband tuning
+- **Ensemble Methods**: Exploración de múltiples algoritmos de boosting y bagging
 
 ### Técnicas Aplicadas
 - Análisis exploratorio de datos (EDA)
 - Ingeniería de características
 - Optimización de threshold de clasificación
-- Oversampling para balanceo de clases
 - Validación cruzada
 - Optimización de hiperparámetros (Keras Tuner, Hyperband)
 - Análisis de curvas ROC y precision-recall
 
-### Notebooks Principales
-- `AnalisisDeDatos.ipynb` - Exploración y análisis del dataset
-- `XGBoost.ipynb` - Implementación y optimización de XGBoost
-- `AdaBoost.ipynb` - Modelo AdaBoost
-- `red_neuronal.ipynb` - Redes neuronales con Keras
-- `pruebas_threshold.ipynb` - Optimización de umbral de decisión
-- `mejor_modelo.ipynb` - Consolidación del mejor modelo
+### Notebooks
+- `notebooks/AnalisisDeDatos.ipynb` - Exploración y análisis del dataset
+- `notebooks/XGBoost.ipynb` - Implementación y optimización de XGBoost
+- `notebooks/red_neuronal.ipynb` - Redes neuronales con Keras
+- `notebooks/mejor_modelo.ipynb` - Consolidación del mejor modelo
 
 ## Resultados
 
@@ -61,35 +55,25 @@ El proyecto logró optimizar la métrica AMS a través de múltiples iteraciones
 
 ### Requisitos
 ```bash
-# Opción 1: pip
+# Instalar dependencias desde el root del repositorio
 pip install -r requirements.txt
-
-# Opción 2: Conda
-conda env create -f conda.yml
 ```
 
 ### Descarga de Datos
 
 Antes de comenzar, es necesario estar registrado en [Kaggle](https://www.kaggle.com) y haber aceptado las condiciones de la competencia.
 
-1. Instalar Kaggle API:
-   ```bash
-   pip install kaggle
-   ```
-
-2. Configurar credenciales (descargar `kaggle.json` desde tu perfil de Kaggle):
+1. Configurar credenciales (descargar `kaggle.json` desde tu perfil de Kaggle):
    ```bash
    mkdir -p ~/.kaggle/
    mv kaggle.json ~/.kaggle/
    chmod 600 ~/.kaggle/kaggle.json
    ```
 
-3. Descargar el dataset:
+2. Descargar el dataset:
    ```bash
    kaggle competitions download -c higgs-boson
-   unzip higgs-boson.zip
-   unzip training.csv.zip
-   unzip test.csv.zip
+   unzip higgs-boson.zip -d data/
    ```
 
 ## Estructura del Proyecto
@@ -97,36 +81,29 @@ Antes de comenzar, es necesario estar registrado en [Kaggle](https://www.kaggle.
 ```
 06-kaggle-higgs-boson/
 ├── README.md
-├── requirements.txt
-├── conda.yml
-├── constantes.py              # Constantes del proyecto
-├── preprocess.py              # Funciones de preprocesamiento
-├── plot_functions.py          # Utilidades de visualización
-├── HiggsBosonCompetition_AMSMetric_rev1.py  # Métrica AMS
-├── AnalisisDeDatos.ipynb      # EDA principal
-├── XGBoost.ipynb              # Modelo XGBoost
-├── AdaBoost.ipynb             # Modelo AdaBoost
-├── RandomForests.ipynb        # Random Forests
-├── ExtraTrees.ipynb           # Extra Trees
-├── red_neuronal.ipynb         # Redes neuronales
-├── mejor_modelo.ipynb         # Mejor modelo consolidado
-├── pruebas_threshold.ipynb    # Optimización de threshold
-├── Oversampling-RegrecionLogistica.ipynb
-├── download_data.ipynb        # Descarga de datos
-└── utils/                     # Utilidades auxiliares
+├── notebooks/
+│   ├── AnalisisDeDatos.ipynb      # Exploración y análisis del dataset
+│   ├── XGBoost.ipynb              # Implementación de XGBoost
+│   ├── red_neuronal.ipynb         # Redes neuronales con Keras
+│   └── mejor_modelo.ipynb         # Mejor modelo final
+├── utils/                         # Utilidades auxiliares
+├── constantes.py                  # Constantes del proyecto
+├── preprocess.py                  # Funciones de preprocesamiento
+├── plot_functions.py              # Utilidades de visualización
+└── HiggsBosonCompetition_AMSMetric_rev1.py  # Métrica AMS
 ```
 
 ## Ejecución
 
 ```bash
 # Ejecutar análisis exploratorio
-jupyter notebook AnalisisDeDatos.ipynb
+jupyter notebook notebooks/AnalisisDeDatos.ipynb
 
 # Entrenar modelo XGBoost
-jupyter notebook XGBoost.ipynb
+jupyter notebook notebooks/XGBoost.ipynb
 
 # Explorar mejor modelo
-jupyter notebook mejor_modelo.ipynb
+jupyter notebook notebooks/mejor_modelo.ipynb
 ```
 
 ## Métricas
