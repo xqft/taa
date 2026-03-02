@@ -1,2 +1,76 @@
+# Kaggle credentials
 .kaggle/
+
+# Experiment tracking
 .comet/
+mlruns/
+wandb/
+.neptune/
+comet_experiments/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files (large datasets)
+*.csv
+*.zip
+*.gz
+*.h5
+*.pkl
+
+# Models and ML artifacts
+*.joblib
+*.keras
+*.pth
+*.ckpt
+saved_models/
+checkpoints/
+best_hyperband/
+nn_model/
+nn_model_hyperband/
+
+# Large generated files from Kaggle projects
+**/report.html
+**/submission.csv
+**/random_submission.zip
+
+# Audio files (too large for git)
+*.wav
+*.mp3
+*.flac
+*.ogg
+data/audio/
+data/raw/
+
+# Generated plots and outputs
+*.png
+*.jpg
+*.jpeg
+outputs/
+results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/

@@ -1,16 +1,64 @@
-# Taller de Aprendizaje Automatico (Machine Learning Workshop)
-#### Facultad de Ingenieria, UdelaR. 2024
+# Taller de Aprendizaje Automático (TAA)
 
-The course is based on Geron's "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems".
+**Facultad de Ingeniería, Universidad de la República**
+**Curso 2024**
 
-This repository contains the individual work done in the course (although each workshop starts in an in-person class so we get to discuss and share details with other students and profs). There's one workshop ("taller" in spanish) per week, contained in each `tN` folder (the `t` stands for "taller").
+Este repositorio consolida los proyectos individuales desarrollados durante el curso de Taller de Aprendizaje Automático, basado en el libro "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" de Aurélien Géron.
 
-## Workshop summaries and conclusions
+## Estructura del Repositorio
 
-1. Titanic survivor binary classifier, based on features of every passenger. Concluded that the most significant features are the passenger's class and sex (as women were prioritized in the lifeboats).
-2. IMDB movie reviews sentiment binary classifier. Final result of 87% accuracy in test set (we weren't taking into account precision, recall, F1 and other metrics yet), using stop words, bigrams and tf-idf metric for weighting.
-3. Bike rental regressor. Cross validation RMSLE of ~0.37 (the error would probable be a lot higher on the test set) using random forest with gradient boosting (XGBoost), Kaggle top 5 leaderboard error is in the 0.35 ball park.
-4. Anomaly detection.
-5. Bike rental prediction over time using RNNs.
+### Talleres Semanales
 
-We also had two projects in which we solved the Higgs Boson and Freesound Audio Tagging challenges on Kaggle, but those are on private repos
+Cinco talleres prácticos desarrollados durante el semestre, cada uno explorando diferentes técnicas de machine learning:
+
+- **[01-clasificador-titanic](./01-clasificador-titanic/)** - Clasificador binario de supervivientes del Titanic
+- **[02-sentiment-imdb](./02-sentiment-imdb/)** - Análisis de sentimiento en reseñas de películas
+- **[03-regresion-bicicletas](./03-regresion-bicicletas/)** - Predicción de demanda de bicicletas (Random Forest + XGBoost)
+- **[04-deteccion-anomalias](./04-deteccion-anomalias/)** - Detección de anomalías en datasets
+- **[05-bicicletas-rnn](./05-bicicletas-rnn/)** - Predicción temporal con redes neuronales recurrentes
+
+### Proyectos Kaggle
+
+Dos proyectos competitivos desarrollados en el curso, con código completo y documentación:
+
+6. **[06-kaggle-higgs-boson](./06-kaggle-higgs-boson/)** - Clasificación de eventos de física de partículas ([Informe](./docs/higgs-boson-informe.pdf))
+7. **[07-kaggle-freesound](./07-kaggle-freesound/)** - Clasificación de audio con deep learning ([Informe](./docs/freesound-informe.pdf))
+
+### Documentación
+
+La carpeta `docs/` contiene los informes en PDF de todos los proyectos:
+
+- `higgs-boson-informe.pdf` - Proyecto 1: Higgs Boson Challenge
+- `freesound-informe.pdf` - Proyecto 2: Freesound Audio Tagging
+- `entregable-1.pdf` - Entregable del primer proyecto
+- `entregable-2.pdf` - Entregable del segundo proyecto
+
+## Resultados Destacados
+
+- **Sentiment Analysis (IMDB):** 87% accuracy con TF-IDF, bigramas y eliminación de stopwords
+- **Bike Demand (XGBoost):** RMSLE ~0.37 en validación cruzada (top 5% en Kaggle ~0.35)
+- **Titanic Classifier:** Identificación de clase social y género como variables críticas de supervivencia
+
+## Configuración del Entorno
+
+```bash
+# Crear entorno conda con todas las dependencias
+conda env create -f environment.yml
+conda activate taa
+
+# Iniciar Jupyter para explorar notebooks
+jupyter notebook
+```
+
+## Tecnologías Utilizadas
+
+- **Frameworks:** scikit-learn, Keras, TensorFlow, PyTorch
+- **Procesamiento:** pandas, numpy, matplotlib, seaborn
+- **Modelos:** Random Forest, XGBoost, RNN/LSTM, transformers
+- **Métricas:** TF-IDF, SHAP values, validación cruzada
+
+## Autor
+
+**Estéfano Bargas**
+Facultad de Ingeniería, Universidad de la República
+Curso 2024
