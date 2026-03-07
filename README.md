@@ -3,7 +3,7 @@
 **Faculty of Engineering, Universidad de la Republica**
 **2024 Course**
 
-This repository consolidates the individual projects developed during the Machine Learning Workshop course, based on the book "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurelien Geron.
+This repository consolidates the projects developed during the Machine Learning Workshop course, based on the book "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurelien Geron.
 
 ## Repository Structure
 
