@@ -1,58 +1,58 @@
-# Taller de Aprendizaje Automático (TAA)
+# Machine Learning Workshop (TAA)
 
-**Facultad de Ingeniería, Universidad de la República**
-**Curso 2024**
+**Faculty of Engineering, Universidad de la Republica**
+**2024 Course**
 
-Este repositorio consolida los proyectos individuales desarrollados durante el curso de Taller de Aprendizaje Automático, basado en el libro "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" de Aurélien Géron.
+This repository consolidates the individual projects developed during the Machine Learning Workshop course, based on the book "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow" by Aurelien Geron.
 
-## Estructura del Repositorio
+## Repository Structure
 
-### Talleres Semanales
+### Weekly Workshops
 
-Cinco talleres prácticos desarrollados durante el semestre, cada uno explorando diferentes técnicas de machine learning:
+Five hands-on workshops developed throughout the semester, each exploring different machine learning techniques:
 
-- **[01-clasificador-titanic](./01-clasificador-titanic/)** - Clasificador binario de supervivientes del Titanic
-- **[02-sentiment-imdb](./02-sentiment-imdb/)** - Análisis de sentimiento en reseñas de películas
-- **[03-regresion-bicicletas](./03-regresion-bicicletas/)** - Predicción de demanda de bicicletas (Random Forest + XGBoost)
-- **[04-deteccion-anomalias](./04-deteccion-anomalias/)** - Detección de anomalías en datasets
-- **[05-bicicletas-rnn](./05-bicicletas-rnn/)** - Predicción temporal con redes neuronales recurrentes
+- **[01-clasificador-titanic](./01-clasificador-titanic/)** - Binary classifier for Titanic survival prediction
+- **[02-sentiment-imdb](./02-sentiment-imdb/)** - Sentiment analysis on movie reviews
+- **[03-regresion-bicicletas](./03-regresion-bicicletas/)** - Bike demand prediction (Random Forest + XGBoost)
+- **[04-deteccion-anomalias](./04-deteccion-anomalias/)** - Anomaly detection on datasets
+- **[05-bicicletas-rnn](./05-bicicletas-rnn/)** - Time-series prediction with recurrent neural networks
 
-### Proyectos Kaggle
+### Kaggle Projects
 
-Dos proyectos competitivos desarrollados en el curso, con código completo y documentación:
+Two competitive projects developed during the course, with full code and documentation:
 
-6. **[06-kaggle-higgs-boson](./06-kaggle-higgs-boson/)** - Clasificación de eventos de física de partículas ([Informe](./docs/higgs-boson-informe.pdf))
-7. **[07-kaggle-freesound](./07-kaggle-freesound/)** - Clasificación de audio con deep learning ([Informe](./docs/freesound-informe.pdf))
+6. **[06-kaggle-higgs-boson](./06-kaggle-higgs-boson/)** - Particle physics event classification ([Report](./docs/higgs-boson-informe.pdf))
+7. **[07-kaggle-freesound](./07-kaggle-freesound/)** - Audio classification with deep learning ([Report](./docs/freesound-informe.pdf))
 
-### Documentación
+### Documentation
 
-La carpeta `docs/` contiene los informes en PDF de todos los proyectos:
+The `docs/` folder contains PDF reports for all projects:
 
-- `higgs-boson-informe.pdf` - Proyecto 1: Higgs Boson Challenge
-- `freesound-informe.pdf` - Proyecto 2: Freesound Audio Tagging
-- `entregable-1.pdf` - Entregable del primer proyecto
-- `entregable-2.pdf` - Entregable del segundo proyecto
+- `higgs-boson-informe.pdf` - Project 1: Higgs Boson Challenge
+- `freesound-informe.pdf` - Project 2: Freesound Audio Tagging
+- `entregable-1.pdf` - First project deliverable
+- `entregable-2.pdf` - Second project deliverable
 
-## Resultados Destacados
+## Key Results
 
-- **Sentiment Analysis (IMDB):** 87% accuracy con TF-IDF, bigramas y eliminación de stopwords
-- **Bike Demand (XGBoost):** RMSLE ~0.37 en validación cruzada (top 5% en Kaggle ~0.35)
-- **Titanic Classifier:** Identificación de clase social y género como variables críticas de supervivencia
+- **Sentiment Analysis (IMDB):** 87% accuracy with TF-IDF, bigrams, and stopword removal
+- **Bike Demand (XGBoost):** RMSLE ~0.37 on cross-validation (Kaggle top 5% ~0.35)
+- **Titanic Classifier:** Identified social class and gender as critical survival variables
 
-## Configuración del Entorno
+## Environment Setup
 
 ```bash
-# Crear entorno conda con todas las dependencias
+# Create conda environment with all dependencies
 conda env create -f environment.yml
 conda activate taa
 
-# Iniciar Jupyter para explorar notebooks
+# Launch Jupyter to explore notebooks
 jupyter notebook
 ```
 
-## Tecnologías Utilizadas
+## Tech Stack
 
 - **Frameworks:** scikit-learn, Keras, TensorFlow, PyTorch
-- **Procesamiento:** pandas, numpy, matplotlib, seaborn
-- **Modelos:** Random Forest, XGBoost, RNN/LSTM, transformers
-- **Métricas:** TF-IDF, SHAP values, validación cruzada
+- **Data processing:** pandas, numpy, matplotlib, seaborn
+- **Models:** Random Forest, XGBoost, RNN/LSTM
+- **Techniques:** TF-IDF, SHAP values, cross-validation
